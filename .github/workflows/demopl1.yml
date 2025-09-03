@@ -3,9 +3,12 @@ on: push
 
 jobs:
     first_job:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Welcome message
-              run:  cat hello.sh #echo "My first GitHub Actions Job"
+        runs-on: linuxg19
+        steps: 
+            - uses: actions/checkout@v4
             - name: list files
               run: ls
+            - name: Welcome message
+              run:  chmod +x hello.sh #echo "My first GitHub Actions Job"
+            - name: list files
+              run: ./hello.sh
