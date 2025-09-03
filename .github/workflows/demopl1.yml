@@ -6,6 +6,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Welcome message
-              run: echo "My first GitHub Actions Job"
+              run: ./hello.sh #echo "My first GitHub Actions Job"
             - name: list files
               run: ls
