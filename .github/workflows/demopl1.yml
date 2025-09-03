@@ -12,3 +12,10 @@ jobs:
               run:  chmod +x hello.sh #echo "My first GitHub Actions Job"
             - name: list files
               run: ./hello.sh
+    second_job:
+        runs-on: linuxg19
+        steps:
+            - name: welcome message
+              run: echo "My first GitHub Actions Job"
+
+            
