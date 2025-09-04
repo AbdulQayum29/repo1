@@ -1,0 +1,20 @@
+name: job with sleep
+on: push
+
+jobs:
+    first_job:
+        runs-on: linuxg19
+        steps: 
+            - uses: actions/checkout@v4
+            - name: list files
+              run: ls
+            - name: Welcome message
+              run:  echo "My first GitHub Actions Job"
+    second_job:
+        runs-on: linuxg19
+        needs: first_job
+        steps:
+            - name: welcome message
+              run: |
+               echo "My first GitHub Actions Job"
+               sleep 600s
