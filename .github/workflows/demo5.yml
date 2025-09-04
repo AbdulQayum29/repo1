@@ -1,5 +1,11 @@
 name: env job
-on: push
+on: 
+  workflow_dispatch:
+    inputs:
+      loglevel:
+        description: 'log level'
+        required: true
+        default: 'warning'
   
 jobs:
   job1:
