@@ -13,12 +13,10 @@ jobs:
     second_job:
         
         needs: first_job
-        concurrency: 
-            group: production deployment
-            cancel-in-progress: false
         runs-on: linuxg19
         steps:
             - name: welcome message
+              timeout-minutes: 1
               run: |
                echo "My first GitHub Actions Job"
                sleep 600s
