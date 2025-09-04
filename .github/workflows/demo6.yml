@@ -11,11 +11,12 @@ jobs:
             - name: Welcome message
               run:  echo "My first GitHub Actions Job"
     second_job:
-        runs-on: linuxg19
+        
         needs: first_job
         concurrency: 
             group: production deployment
-            cancel-in-progress: true
+            cancel-in-progress: false
+        runs-on: linuxg19
         steps:
             - name: welcome message
               run: |
