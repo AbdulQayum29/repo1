@@ -1,0 +1,21 @@
+name: My second Workflow
+on: push
+
+jobs:
+    first_job:
+        runs-on: linuxg19
+        steps: 
+            - uses: actions/checkout@v4
+            - name: list files
+              run: |
+                echo "My first GitHub Actions Job"
+                ls -ltra
+                chmod +x hello.sh
+                ./hello.sh
+            
+    # second_job:
+    #     runs-on: linuxg19
+    #     needs: first_job
+    #     steps:
+    #         - name: welcome message
+    #           run: echo "My first GitHub Actions Job"
