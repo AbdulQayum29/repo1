@@ -21,15 +21,20 @@ jobs:
         run: cowsay -f dragon "Run for cover, I am a DRAGON.... RAWR" >> dragon.txt
 
 
-      - name: Pause for 30 seconds
-        run: sleep 30
+      - name: Upload Dragon file
+        uses: actions/ipload-artifact@v3
+        with:
+          name: dragon text
+          run: dragon.txt
 
 
   test_job_2:
     runs-on: linuxg19
     steps:
-      - name: Pause for 10 seconds
-        run: sleep 10
+      - name: Download text file
+        uses: sctions/download-artifact@v3
+        with:
+          name: dragon-text-file
 
 
       - name: Verify dragon.txt
