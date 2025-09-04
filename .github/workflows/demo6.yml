@@ -13,6 +13,9 @@ jobs:
     second_job:
         runs-on: linuxg19
         needs: first_job
+        concurrency: 
+            group: production deployment
+            cancel-in-progress: true
         steps:
             - name: welcome message
               run: |
