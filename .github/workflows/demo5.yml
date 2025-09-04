@@ -1,0 +1,13 @@
+name: env job
+on:push
+  
+jobs:
+  job1:
+    runs-on: linuxg19
+    steps:
+      - name: step1
+        env:
+          stepVar1: stepvalue1
+        run: |
+          echo "The value for stepvar1: $stepVar1"
+
