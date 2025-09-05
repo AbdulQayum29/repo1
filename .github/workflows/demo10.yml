@@ -48,5 +48,7 @@ jobs:
 
       # Uncomment to deploy based on the selected environment
       - name: Deploy to ${{ inputs.environment }}
-        environment: ${{ inputs.environment }}
-        run: echo "Deploying to ${{ inputs.environment }}"
+        #environment: ${{ inputs.environment }}
+        run: |
+          echo "Deploying to ${{ inputs.environment }}"
+          echo "${{ vars.variable}}"
