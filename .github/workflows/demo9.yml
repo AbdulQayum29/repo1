@@ -12,6 +12,10 @@ jobs:
               run: echo "test=hello" >> "$GITHUB_OUTPUT"
             - id: step2
               run: echo "test=World" >> "$GITHUB_OUTPUT"
+            - id: step3
+              run: echo "$OUTPUT1 $OUTPUT2"
+            - name: show the ref
+              run: echo "${{ github.ref }}"
 
     job2:
         runs-on: ubuntu-latest
