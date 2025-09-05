@@ -1,4 +1,3 @@
-Sample Workflow: Dumping Contexts:
 
 name: Context testing
 on: push
