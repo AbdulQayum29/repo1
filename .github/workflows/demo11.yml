@@ -12,5 +12,5 @@ jobs:
     steps:
       - name: Display payload
         run: 
-            echo "Payload: ${{ github.event.client_payload.message }}"
+            echo "Payload ${{ github.event.client_payload.message }}"
 		
