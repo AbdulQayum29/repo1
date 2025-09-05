@@ -1,0 +1,11 @@
+name: Composite workflow
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use my composite action
+        uses: ./.github/actions
+        with:
+          node-version: '18'
